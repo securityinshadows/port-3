@@ -150,9 +150,6 @@ def load_expenses():
         
         expenses = c.fetchall()
         
-        if not expenses:  # Check if the expenses list is empty
-            print("No expenses found.")
-        
         for expense in expenses:
             if expense[1] is not None:
                 expenses_list.append({
@@ -180,10 +177,7 @@ def load_income():
         ''')
         
         income = c.fetchall()
-        
-        if not income:  # Check if the income list is empty
-            print("No income records found.")
-        
+
         for inc in income:
             if inc[1] is not None:
                 income_list.append({
